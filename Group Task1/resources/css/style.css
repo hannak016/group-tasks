@@ -17,16 +17,36 @@ html {
   width: 100%;
   text-align: center;
 }
-
-canvas {
-  margin-top: 5%;
-  width: 50vw;
-  border-radius: 10%;
+img {
+  width: 90vh;
+  z-index: -10;
 }
 
 /*-----------------------------------------
  REUSABLE COMPONENTS
 -----------------------------------------*/
+button {
+  border: 2px solid #000000;
+  padding: 2% 2%;
+
+  margin: -35% 5%;
+  color: #393939;
+  border-radius: 100px;
+  background: rgb(222, 222, 222);
+  text-align: center;
+  transition: background-color 1s;
+  font-size: 20px;
+}
+button:hover {
+  background: rgb(155, 161, 206);
+}
+
+section {
+  padding: 5%;
+  margin: 0% 10%;
+  height: 20vh;
+  clear: both;
+}
 
 .col {
   display: block;
@@ -52,32 +72,34 @@ canvas {
   width: 32.26%;
 }
 
-section {
-  padding: 5%;
-  margin: 0% 10%;
-  height: 20vh;
-  clear: both;
-}
-
 /*-----------------------------------------
 COMPONENT(S)
 -----------------------------------------*/
 
-/*-----------------FORM--------------------*/
+/*-----------------img-box--------------------*/
 
-.textFeld {
-  background-image: linear-gradient(#dfdedea3, #ffffff);
+.img-box {
+  margin: 10%;
+  display: flex;
+}
+.img-btn {
+  margin: 10%;
+}
+
+/*-----------------textfield--------------------*/
+/* ....general setting.... */
+.textField {
+  background-image: linear-gradient(#596e9b, #ffffff);
   width: 80%;
   margin: 10%;
   background-size: cover;
 }
 
-.textFeld ion-icon {
+.textField ion-icon {
   color: #000;
 }
-
-.textFeld input,
-.textFeld textarea {
+/* ....text area.... */
+.textField input[type="text"] {
   width: 100%;
   height: 100%;
   border: 1px solid #000;
@@ -85,7 +107,8 @@ COMPONENT(S)
   border-radius: 3px;
 }
 
-.textFeld input[type="submit"] {
+/* ....submit button.... */
+.textField input[type="submit"] {
   margin: 10% 1%;
   width: 80%;
   padding: 3%;
@@ -97,7 +120,22 @@ COMPONENT(S)
   transition: background-color 1s;
 }
 
-.textFeld input[type="submit"]:hover,
+.textField input[type="submit"]:hover,
 :active {
   background-color: #a8c0d8;
+}
+.bottomTextarea,
+.topTextarea {
+  position: absolute;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.topTextarea {
+  bottom: 70%;
+  left: 60%;
+}
+.bottomTextarea {
+  top: 70%;
+  right: 60%;
 }

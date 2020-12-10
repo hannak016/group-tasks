@@ -14,13 +14,32 @@
   </head>
 
   <body>
-    <img src="resources/img/1.PNG" />
+    <div class="sticky">
+      <!-- if you do so you would need to keep scrolling down -->
+      <!--  <ul class="row nav-box">
+        <li class="col span-1-of-3"><a href="#textField">create</a></li>
+        <li class="col span-1-of-3"><a href="#toolbox">lala</a></li>
+        <li class="col span-1-of-3"><a href="#contact">CONTACT</a></li>
+      </ul> -->
+    </div>
 
-    <section class="textFeld" id="textFeld">
+    <!-- dummy img -->
+    <div class="img-box">
+      <button class="img-btn btnPrev">&lt;</button>
+      <div class="img-with-text">
+        <div class="topTextarea"></div>
+        <img src="resources/img/1.JPG" />
+        <div class="bottomTextarea"></div>
+      </div>
+
+      <button class="img-btn btnNext">&gt;</button>
+    </div>
+
+    <section class="textField">
       <div>
         <form method="POST" action="#to a link">
-          <!-- selection -->
-          <div class="row-w">
+          <!-- textarea for top -->
+          <div class="top">
             <div class="col span-1-of-3">
               <ion-icon name="help-outline" class="icon-small"></ion-icon>
               <label for="">&nbsp;top</label>
@@ -31,16 +50,18 @@
             </div>
           </div>
 
-          <div class="row-w">
+          <!-- textarea for bottom -->
+          <div class="bottom">
             <div class="col span-1-of-3">
               <ion-icon name="help-outline" class="icon-small"></ion-icon>
               <label for="">&nbsp;bottom</label>
             </div>
 
             <div class="col span-2-of-3">
-              <input type="text" id="bottom" />
+              <input type="text" />
             </div>
           </div>
+          <!-- submit btn -->
           <div><input type="submit" value="create" /></div>
         </form>
       </div>
